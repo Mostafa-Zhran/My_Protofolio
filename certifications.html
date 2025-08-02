@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications - Your Name</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Your Name</a>
+            <ul class="nav-links">
+                <li><a href="index.html#about"><i class="fas fa-user-circle"></i> About</a></li>
+                <li><a href="index.html#skills"><i class="fas fa-cogs"></i> Skills</a></li>
+                <li><a href="#" class="active"><i class="fas fa-certificate"></i> Certifications</a></li>
+                <li><a href="projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="index.html#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li class="nav-item">
+                    <button id="darkModeToggle" class="btn btn-sm btn-outline-secondary ms-2">
+                        <i class="fas fa-moon"></i> Dark Mode
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1><i class="fas fa-certificate"></i> My Certifications</h1>
+            <a href="index.html" class="btn btn-outline-primary">
+                <i class="fas fa-arrow-left me-2"></i>Back to Home
+            </a>
+        </div>
+
+        <div class="certifications-grid">
+            <div class="certificate-card" data-aos="fade-up">
+                <a href="https://via.placeholder.com/800x600" target="_blank" rel="noopener noreferrer" class="certificate-image-link">
+                    <img src="https://via.placeholder.com/150" alt="Certificate Badge" class="img-fluid">
+                </a>
+                <div class="certificate-details">
+                    <h3>Certified Web Developer</h3>
+                    <p class="issuer">Issued by Tech Academy</p>
+                    <p class="date">Issued: January 2023</p>
+                    <p class="description">Comprehensive web development certification covering HTML, CSS, JavaScript, and modern frameworks.</p>
+                    <a href="#" class="btn btn-sm btn-outline-primary mt-2">View Credential</a>
+                </div>
+            </div>
+
+            <div class="certificate-card" data-aos="fade-up" data-aos-delay="100">
+                <a href="https://via.placeholder.com/800x600" target="_blank" rel="noopener noreferrer" class="certificate-image-link">
+                    <img src="https://via.placeholder.com/150" alt="Certificate Badge" class="img-fluid">
+                </a>
+                <div class="certificate-details">
+                    <h3>Advanced Python Specialist</h3>
+                    <p class="issuer">Issued by Code Institute</p>
+                    <p class="date">Issued: March 2023</p>
+                    <p class="description">Advanced Python programming concepts including data structures, algorithms, and design patterns.</p>
+                    <a href="#" class="btn btn-sm btn-outline-primary mt-2">View Credential</a>
+                </div>
+            </div>
+
+            <div class="certificate-card" data-aos="fade-up" data-aos-delay="200">
+                <a href="https://via.placeholder.com/800x600" target="_blank" rel="noopener noreferrer" class="certificate-image-link">
+                    <img src="https://via.placeholder.com/150" alt="Certificate Badge" class="img-fluid">
+                </a>
+                <div class="certificate-details">
+                    <h3>UI/UX Design Master</h3>
+                    <p class="issuer">Issued by Design Experts</p>
+                    <p class="date">Issued: June 2023</p>
+                    <p class="description">Mastery in user interface and user experience design principles and best practices.</p>
+                    <a href="#" class="btn btn-sm btn-outline-primary mt-2">View Credential</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Get In Touch</h5>
+                    <p>Feel free to reach out for collaborations or just a friendly hello</p>
+                    <div class="social-links">
+                        <a href="#" class="me-2"><i class="fab fa-github fa-lg"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-instagram fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h5>Send Me a Message</h5>
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="3" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p class="mb-0">&copy; 2025 Your Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

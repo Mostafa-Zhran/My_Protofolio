@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Your Name</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Your Name</a>
+            <ul class="nav-links">
+                <li><a href="index.html#about"><i class="fas fa-user-circle"></i> About</a></li>
+                <li><a href="index.html#skills"><i class="fas fa-cogs"></i> Skills</a></li>
+                <li><a href="certifications.html"><i class="fas fa-certificate"></i> Certifications</a></li>
+                <li><a href="#" class="active"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="index.html#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li class="nav-item">
+                    <button id="darkModeToggle" class="btn btn-sm btn-outline-secondary ms-2">
+                        <i class="fas fa-moon"></i> Dark Mode
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1><i class="fas fa-project-diagram"></i> My Projects</h1>
+            <a href="index.html" class="btn btn-outline-primary">
+                <i class="fas fa-arrow-left me-2"></i>Back to Home
+            </a>
+        </div>
+
+        <div class="text-center mb-4">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+            <button class="filter-btn" data-filter="design">Design</button>
+            <button class="filter-btn" data-filter="other">Other</button>
+        </div>
+
+        <div class="row g-4 projects-grid">
+            <!-- Project 1 - Web -->
+            <div class="col-md-6 col-lg-4 project-item" data-category="web">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://via.placeholder.com/400x250/3498db/ffffff" class="card-img-top" alt="E-commerce Website">
+                    <div class="card-body">
+                        <h5 class="card-title">E-commerce Website</h5>
+                        <p class="card-text">A full-featured e-commerce platform with product catalog, cart, and checkout system.</p>
+                        <div class="mb-2">
+                            <span class="badge bg-primary me-1">React</span>
+                            <span class="badge bg-secondary me-1">Node.js</span>
+                            <span class="badge bg-info text-dark">MongoDB</span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <a href="#" class="btn btn-sm btn-outline-primary me-2">View Project</a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary">
+                            <i class="fab fa-github me-1"></i> Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 - Mobile -->
+            <div class="col-md-6 col-lg-4 project-item" data-category="mobile">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://via.placeholder.com/400x250/2ecc71/ffffff" class="card-img-top" alt="Fitness Tracker App">
+                    <div class="card-body">
+                        <h5 class="card-title">Fitness Tracker App</h5>
+                        <p class="card-text">Mobile application for tracking workouts and nutrition with progress analytics.</p>
+                        <div class="mb-2">
+                            <span class="badge bg-primary me-1">React Native</span>
+                            <span class="badge bg-success me-1">Firebase</span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <a href="#" class="btn btn-sm btn-outline-primary me-2">View App</a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary">
+                            <i class="fab fa-github me-1"></i> Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 - Design -->
+            <div class="col-md-6 col-lg-4 project-item" data-category="design">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://via.placeholder.com/400x250/e74c3c/ffffff" class="card-img-top" alt="UI/UX Redesign">
+                    <div class="card-body">
+                        <h5 class="card-title">Banking App Redesign</h5>
+                        <p class="card-text">Complete redesign of a banking app interface with improved user experience.</p>
+                        <div class="mb-2">
+                            <span class="badge bg-warning text-dark me-1">Figma</span>
+                            <span class="badge bg-danger me-1">Adobe XD</span>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <a href="#" class="btn btn-sm btn-outline-primary me-2">Case Study</a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary">
+                            <i class="fas fa-external-link-alt me-1"></i> Prototype
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Get In Touch</h5>
+                    <p>Feel free to reach out for collaborations or just a friendly hello</p>
+                    <div class="social-links">
+                        <a href="#" class="me-2"><i class="fab fa-github fa-lg"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-instagram fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h5>Send Me a Message</h5>
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="3" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p class="mb-0">&copy; 2025 Your Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
