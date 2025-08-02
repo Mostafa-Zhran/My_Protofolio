@@ -28,6 +28,117 @@
     --hover-bg: #2a2a2a;
 }
 
+/* CV Buttons */
+.cv-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-cv-download, .btn-cv-link {
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-cv-download {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+}
+
+.btn-cv-link {
+    background: white;
+    border: 2px solid #3498db;
+    color: #3498db;
+}
+
+.btn-cv-download:hover {
+    background: linear-gradient(135deg, #2980b9, #3498db);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.3);
+}
+
+.btn-cv-link:hover {
+    background: rgba(52, 152, 219, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Dark mode styles for buttons */
+[data-theme="dark"] .btn-cv-link {
+    border-color: #3498db;
+    color: #3498db;
+}
+
+[data-theme="dark"] .btn-cv-link:hover {
+    background: rgba(52, 152, 219, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .cv-buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .btn-cv-download, .btn-cv-link {
+        width: 100%;
+        padding: 0.7rem 1.5rem;
+    }
+}
+
+/* Profile Image Styles */
+.profile-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 5px solid white;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profile-image-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.profile-image-container:hover .profile-image {
+    transform: scale(1.05);
+}
+
+/* Dark mode styles for profile image */
+[data-theme="dark"] .profile-image-container {
+    border-color: #2d2d2d;
+    background: #2d2d2d;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .profile-image-container:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
 /* Base dark mode styles */
 [data-theme="dark"] {
     background-color: var(--background-color);
