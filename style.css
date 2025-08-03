@@ -3,10 +3,12 @@
     --secondary-color: #2ecc71;
     --text-color: #333;
     --background-color: #f4f7f6;
-    --card-bg: #ffffff;
+    --card-bg: #fff;
     --header-bg: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    --nav-bg: #ffffff;
-    --section-bg: #ffffff;
+    --nav-bg: #fff;
+    --section-bg: #fff;
+    --border-color: #ddd;
+    --hover-bg: #f8f9fa;
 }
 
 * {
@@ -15,7 +17,6 @@
     box-sizing: border-box;
 }
 
-/* Dark mode variables */
 [data-theme="dark"] {
     --text-color: #f0f0f0;
     --text-muted: #b0b0b0;
@@ -28,7 +29,7 @@
     --hover-bg: #2a2a2a;
 }
 
-/* CV Buttons */
+/* Buttons */
 .cv-buttons {
     display: flex;
     gap: 1rem;
@@ -36,10 +37,11 @@
     flex-wrap: wrap;
 }
 
-.btn-cv-download, .btn-cv-link {
+.btn-cv-download, 
+.btn-cv-link {
     padding: 0.8rem 1.8rem;
     border-radius: 50px;
-    font-weight: 500;
+    font: 500 1rem/1.5 'Poppins', sans-serif;
     text-decoration: none;
     transition: all 0.3s ease;
     display: inline-flex;
@@ -48,50 +50,51 @@
     text-align: center;
     border: none;
     cursor: pointer;
-    font-size: 1rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .btn-cv-download {
     background: linear-gradient(135deg, #3498db, #2980b9);
-    color: white;
+    color: #fff;
 }
 
 .btn-cv-link {
-    background: white;
-    border: 2px solid #3498db;
-    color: #3498db;
+    background: #fff;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-cv-download:hover,
+.btn-cv-link:hover {
+    transform: translateY(-2px);
 }
 
 .btn-cv-download:hover {
     background: linear-gradient(135deg, #2980b9, #3498db);
-    transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(52, 152, 219, 0.3);
 }
 
 .btn-cv-link:hover {
     background: rgba(52, 152, 219, 0.1);
-    transform: translateY(-2px);
 }
 
-/* Dark mode styles for buttons */
 [data-theme="dark"] .btn-cv-link {
-    border-color: #3498db;
-    color: #3498db;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 [data-theme="dark"] .btn-cv-link:hover {
     background: rgba(52, 152, 219, 0.2);
 }
 
-/* Responsive adjustments */
 @media (max-width: 576px) {
     .cv-buttons {
         flex-direction: column;
         gap: 0.8rem;
     }
     
-    .btn-cv-download, .btn-cv-link {
+    .btn-cv-download, 
+    .btn-cv-link {
         width: 100%;
         padding: 0.7rem 1.5rem;
     }
@@ -300,12 +303,13 @@
     color: white;
 }
 
+/* Base styles */
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: all 0.3s ease;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -314,7 +318,13 @@ body {
     width: 90%;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 2rem 1rem;
+    }
 }
 
 header {
@@ -977,38 +987,40 @@ textarea.form-control {
     padding: 1.5rem;
 }
 
-/* Language tag styles */
+/* Language badges */
 .badge {
-    font-weight: 500;
+    font: 500 0.8rem/1.5 'Poppins', sans-serif;
     padding: 0.4em 0.8em;
-    margin-right: 0.5em;
-    margin-bottom: 0.5em;
+    margin: 0 0.5em 0.5em 0;
     display: inline-block;
-    font-size: 0.8rem;
     border-radius: 4px;
-    color: white !important;
+    color: #fff !important;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
 
-/* Language specific colors */
-.badge[class*="HTML"] { background-color: #e34c26 !important; }
-.badge[class*="CSS"] { background-color: #563d7c !important; }
-.badge.JavaScript { background-color: #f1e05a !important; color: #333 !important; }
-.badge[class*="React"] { background-color: #61dafb !important; color: #20232a !important; }
-.badge[class*="Node"] { background-color: #68a063 !important; }
-.badge[class*="MongoDB"] { background-color: #4db33d !important; }
-.badge[class*="C#"] { background-color: #178600 !important; }
-.badge[class*="C++"] { background-color: #f34b7d !important; }
-.badge[class*="Python"] { background-color: #3572A5 !important; }
-.badge[class*="SQL"] { background-color: #336791 !important; }
-.badge[class*="TypeScript"] { background-color: #2b7489 !important; }
-.badge[class*="Figma"] { background-color: #f24e1e !important; }
-.badge[class*="Adobe XD"] { background-color: #ff61f6 !important; }
-.badge[class*="Firebase"] { background-color: #ffcb2b !important; color: #333 !important; }
-.badge[class*="React Native"] { background-color: #61dafb !important; color: #20232a !important; }
+/* Language colors (GitHub style) */
+.badge[class*="HTML"] { background-color: #e34c26; }
+.badge[class*="CSS"] { background-color: #563d7c; }
+.badge.JavaScript { background-color: #f1e05a; color: #333 !important; }
+.badge[class*="React"] { background-color: #61dafb; color: #20232a !important; }
+.badge[class*="Node"] { background-color: #68a063; }
+.badge[class*="MongoDB"] { background-color: #4db33d; }
+.badge[class*="C#"] { background-color: #178600; }
+.badge[class*="C++"] { background-color: #f34b7d; }
+.badge[class*="Python"] { background-color: #3572A5; }
+.badge[class*="SQL"] { background-color: #336791; }
+.badge[class*="TypeScript"] { background-color: #2b7489; }
+.badge[class*="Figma"] { background-color: #f24e1e; }
+.badge[class*="Adobe XD"] { background-color: #ff61f6; }
+.badge[class*="Firebase"],
+.badge[class*="React Native"] { 
+    background-color: #ffcb2b; 
+    color: #333 !important; 
+}
 
-/* Dark mode adjustments */
 [data-theme="dark"] .badge {
     opacity: 0.9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .project-item .card-title {
