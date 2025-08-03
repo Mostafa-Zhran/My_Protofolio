@@ -977,6 +977,40 @@ textarea.form-control {
     padding: 1.5rem;
 }
 
+/* Language tag styles */
+.badge {
+    font-weight: 500;
+    padding: 0.4em 0.8em;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    display: inline-block;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    color: white !important;
+}
+
+/* Language specific colors */
+.badge[class*="HTML"] { background-color: #e34c26 !important; }
+.badge[class*="CSS"] { background-color: #563d7c !important; }
+.badge.JavaScript { background-color: #f1e05a !important; color: #333 !important; }
+.badge[class*="React"] { background-color: #61dafb !important; color: #20232a !important; }
+.badge[class*="Node"] { background-color: #68a063 !important; }
+.badge[class*="MongoDB"] { background-color: #4db33d !important; }
+.badge[class*="C#"] { background-color: #178600 !important; }
+.badge[class*="C++"] { background-color: #f34b7d !important; }
+.badge[class*="Python"] { background-color: #3572A5 !important; }
+.badge[class*="SQL"] { background-color: #336791 !important; }
+.badge[class*="TypeScript"] { background-color: #2b7489 !important; }
+.badge[class*="Figma"] { background-color: #f24e1e !important; }
+.badge[class*="Adobe XD"] { background-color: #ff61f6 !important; }
+.badge[class*="Firebase"] { background-color: #ffcb2b !important; color: #333 !important; }
+.badge[class*="React Native"] { background-color: #61dafb !important; color: #20232a !important; }
+
+/* Dark mode adjustments */
+[data-theme="dark"] .badge {
+    opacity: 0.9;
+}
+
 .project-item .card-title {
     color: var(--text-color);
     margin-bottom: 0.75rem;
